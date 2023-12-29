@@ -20,7 +20,7 @@ const usePlatforms = () => {
     queryKey: ["platforms"],
     queryFn: apiClient.getAll,
     staleTime: 24 * 60 * 60 * 1000,
-    initialData: { count: staticPlatforms.length, results: staticPlatforms },
+    initialData: staticPlatforms,
   });
 
   return { platforms, error, isLoading };
